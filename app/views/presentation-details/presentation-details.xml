@@ -1,0 +1,19 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="loaded" navigatedTo="navigatedTo">
+  <Page.actionBar>
+    <ActionBar title="{{ date }}">
+      
+    </ActionBar>
+  </Page.actionBar>
+  <StackLayout>
+      <StackLayout orientation="horizontal" class="details-header">
+        <Image src="res://avatar" horizontalAlignment="center" />
+        <StackLayout>
+          <Label text="{{ company }}" class="details-header-company" />
+          <Label text="{{ author }}" class="details-header-author" />
+        </StackLayout>
+      </StackLayout>
+    <Label text="{{ title }}" class="details-title" textWrap="true" />
+    <Label text="Abstract" class="details-abstract-label" />  
+    <Label text="{{ abstract }}" class="details-abstract" textWrap="true" />
+  </StackLayout>
+</Page>

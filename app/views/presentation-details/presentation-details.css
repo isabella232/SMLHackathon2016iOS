@@ -1,0 +1,49 @@
+Page {
+  background-color: #fff;
+}
+
+Image {
+  width: 80;
+  height: 80;
+  margin-left: 10;
+  margin-right: 10;
+}
+
+.details-header {
+  margin-bottom: 10;
+  background-color: #eee;
+  padding-bottom: 10;
+  padding-top: 10;
+}
+
+.details-header > StackLayout {
+  margin-top: 20;
+}
+
+.details-header-company {
+  color: gray;
+}
+
+.details-header-author {
+  font-size: 26;
+}
+
+.details-title {
+  margin-top: 10;
+  margin-left: 15;
+  margin-right: 10;
+  font-size: 30;
+  font-weight: bold;
+}
+
+.details-abstract-label {
+  color: gray;
+  margin-top: 20;
+  margin-left: 15;
+}
+
+.details-abstract {
+  font-size: 20;
+  margin-left: 15;
+  margin-right: 10;
+}

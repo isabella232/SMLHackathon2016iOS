@@ -1,0 +1,64 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <Page.actionBar>
+    <ActionBar title="Conference">
+    </ActionBar>
+  </Page.actionBar>
+
+  <TabView>
+   <TabView.items>
+     <TabViewItem title="Conference">
+       <TabViewItem.view>
+          <DockLayout height="550">
+            <StackLayout dock="top" height="450">
+              <Label text="Conference!" class="conference-title" />
+              <Label text="Warsaw, 18 Nov 2016!" class="conference-address" />
+              <Label text="tym tyrym tym tym." class="conference-details" />
+            </StackLayout>
+            <Image src="res://sml.jpg" dock="bottom" height="100" class="sml-logo" />
+          </DockLayout>
+       </TabViewItem.view>
+     </TabViewItem>
+     <TabViewItem title="Presentations">
+       <TabViewItem.view>
+
+          <ListView items="{{ presentations }}">
+            <ListView.itemTemplate>
+              <WrapLayout class="presentation-item">
+                <!--keynotes-->
+                <StackLayout orientation="horizontal" id="{{ id }}" visibility="{{ type === 'keynote' ? 'visible' : 'collapsed'}}" tap="details">
+                  <Image src="res://avatar" horizontalAlignment="center" />
+                  <StackLayout>
+                    <Label text="{{ date }}" class="presentation-item-date" />
+                    <Label text="{{ author || '' }}" class="presentation-item-author" />
+                    <Label text="{{ title }}" class="presentation-item-title" />
+                  </StackLayout>
+                </StackLayout>
+
+                <!--breaks-->
+                <StackLayout visibility="{{ type === 'break' ? 'visible' : 'collapsed'}}" class="break">
+                  <Label text="{{ title + ' - ' + date }}" />
+                </StackLayout>
+              </WrapLayout>
+            </ListView.itemTemplate>
+          </ListView>
+
+       </TabViewItem.view>
+     </TabViewItem>
+     <TabViewItem title="Map">
+       <TabViewItem.view>
+          <StackLayout>
+            <Label text=".map(el => el * 100)" class="map-map" />
+            <Image src="res://troll" class="map-troll" />
+          </StackLayout>
+       </TabViewItem.view>
+     </TabViewItem>
+     <TabViewItem title="About">
+       <TabViewItem.view>
+          <StackLayout>
+            <Label text="developed by Marcin Baraniecki on SML Hackathon 18/11/2016" class="about-label" />
+          </StackLayout>
+       </TabViewItem.view>
+     </TabViewItem>
+   </TabView.items>
+ </TabView>
+</Page>
